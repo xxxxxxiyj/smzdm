@@ -35,7 +35,7 @@ export default function(router) {
 	})
 
 	// 获取当前登录用户
-	rputer.get('api/user', async (ctx, next) => {
+	router.get('api/user', async (ctx, next) => {
 		if (ctx.session.user) {
 			ctx.body = { ok: true, msg: '已登录', user: ctx.session.user }
 		} else {

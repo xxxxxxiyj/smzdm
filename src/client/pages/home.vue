@@ -9,7 +9,7 @@ import layout from '../components/layout.vue'
 
 export default {
 	components: {
-		'layout-component': layout,
+		'layout-component': layout
 	},
 	head: {
 		title: {

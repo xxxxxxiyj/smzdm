@@ -13,7 +13,7 @@ const router = new VueRouter({
 	routes: [
 		{
 			path: '/',
-			comonent: home
+			component: home
 		}, {
 			path: '*',
 			component: notFound

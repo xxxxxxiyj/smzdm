@@ -25,14 +25,14 @@ userSchema.virtual('prettyCreatedAt').get(function() {
 // 通过statics 给 model 添加静态方法
 // 用户注册
 userSchema.statics.add = async function(ctx, user) {
-	let document = await this.findOne({ emial: user.email })
-	if (document) {
-		return { ok: false, msg: '此邮箱已注册' }
-	}
-	let document_2 = await this.findOne({ username: user.username })
-	if (document_2) {
-		return { ok: false, msg: '此用户名已存在' }
-	}
+    let document_1 = await this.findOne({ email: user.email  })
+    if (document_1) {
+        return { ok: false, msg: '此邮箱已注册' }
+    }
+    let document_2 = await this.findOne({ username: user.username })
+    if (document_2) {
+        return { ok: false, msg: '此用户名已已存在' }
+    }
 
 	user.password = md5(user.password)
 	await user.save()
@@ -52,7 +52,7 @@ userSchema.statics.login = async function(ctx, email, password) {
 	let user = await this.findOne({ email })
 
 	if (user) {
-		if (md5(passowrd) === user.password) {
+		if (md5(password) === user.password) {
 			user.password = null
 			ctx.session.user = user
 			return { ok: true, msg: '登录成功', user }

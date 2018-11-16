@@ -58,7 +58,7 @@
 	padding: 10px 50px 50px;
 	color: #666;
 	font-size: 16px;
-	line-height: : 1.8em;
+	line-height: 1.8em;
 }
 .vmodal-enter {
 	opacity: 0;

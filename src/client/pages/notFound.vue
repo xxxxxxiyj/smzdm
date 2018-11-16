@@ -6,7 +6,11 @@
 
 <script>
 import layout from '../components/layout.vue'
+
 export default {
+	// components: {
+	// 	'layout-component': layout
+	// },
 	data() {
 		return {
 		}
