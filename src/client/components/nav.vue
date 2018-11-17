@@ -2,6 +2,8 @@
 	<nav>
 		<div class="container">
 			<router-link to="/" exact>首页</router-link>
+			<!-- 通过for循环显示分类 -->
+			<router-link v-if="cates.cates" v-for="cate in cates.cates" :to="'/category/' + cate.url">{{ cate.name }}</router-link>
 			<div class="pull-right">
 				<template v-if="user && user.ok">
 					<router-link to="/user">{{ user.user.username }}</router-link>
@@ -71,6 +73,10 @@ export default {
 		user() {
 			// 通过 store 中定义的 getters 获取用户信息
 			return this.$store.getters.currentUser
+		},
+		cates() {
+			// 从store的getters获取所有分类
+			return this.$store.getters.cates
 		}
 	},
 	methods: {
@@ -104,6 +110,7 @@ export default {
 		}
 	},
 	mounted() {
+		// 组件挂载后通过store dispatch请求所有分类
 		this.$store.dispatch({ type: 'getCates' })
 	}
 }

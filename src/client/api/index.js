@@ -20,7 +20,15 @@ const user = {
 	logout: 'logout'
 }
 
+const category = {
+	findAll: 'cates',
+	add: 'cates/add',
+	edit: 'cates/edit',
+	remove: 'cates/delete'
+}
+
 export {
 	fetch,
-	user
+	user,
+	category
 }

@@ -53,16 +53,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hojas/smzdm.git"
+    "url": "https://github.com/xxxxxxiyj/smzdm.git"
   },
   "keywords": [
     "koa",
     "vue"
   ],
-  "author": "hojas",
+  "author": "xxxxxxiyj",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hojas/smzdm/issues"
+    "url": "https://github.com/xxxxxxiyj/smzdm/issues"
   },
-  "homepage": "https://github.com/hojas/smzdm#readme"
+  "homepage": "https://github.com/xxxxxxiyj/smzdm#readme"
 }

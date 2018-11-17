@@ -65,7 +65,7 @@ userSchema.statics.login = async function(ctx, email, password) {
 let User = mongoose.model('User', userSchema);
 
 // 添加admin用户
-// 邮箱： admin@shiyanlou.com
+// 邮箱： admin@yoyoyo.com
 // 密码: admin
 User.findOne({ isAdmin: true }).then(user => {
 	// 如果已经存在管理员则不再添加
@@ -75,7 +75,7 @@ User.findOne({ isAdmin: true }).then(user => {
 
 	const admin = new User({
 		username: 'admin',
-		email: 'admin@shiyanlou.com',
+		email: 'admin@yoyoyo.com',
 		password: md5('admin'),
 		isAdmin: true,
 	})

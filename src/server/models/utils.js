@@ -18,7 +18,7 @@ export const save = async document => {
  * @param  {object} model - document need to save
  * @return {object} `{ok: boolean, msg: string}`
  */
-export const update = aysnc (model, document) => {
+export const update = async (model, document) => {
 	try {
 		await model.findByIdAndUpdate(document._id, { ...document })
 		return { ok: true, msg: '更新成功' }

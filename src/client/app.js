@@ -1,4 +1,8 @@
 import 'babel-polyfill'
+// 引入 element-ui 的css
+import 'element-ui/lib/theme-default/index.css'
+// 引入 element-ui 的组件
+import ElementUI from 'element-ui'
 import Vue from 'vue'
 import VueHead from 'vue-head'
 
